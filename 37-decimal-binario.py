@@ -1,4 +1,5 @@
-def convertidor(decimal, listabin):
+def convertidor(decimal):
+    listabin = []
     while (decimal >= 1):
         digitos = decimal % 2
         decimal = decimal // 2
@@ -6,7 +7,6 @@ def convertidor(decimal, listabin):
     return listabin
 
 
-listabin = []
 decimal = int(input("Ingresa el numero a convertir a binario:\n"))
-binario = convertidor(decimal, listabin)
+binario = convertidor(decimal)
 print(f"El {decimal} en binario es: {binario[::-1]}\n")
